@@ -1,6 +1,6 @@
 {
-  "name": "vue-grid-layout",
-  "version": "2.3.9",
+  "name": "vue3-grid-drag-layout",
+  "version": "1.0.0",
   "description": "A draggable and resizable grid layout, as a Vue component.",
   "keywords": [
     "grid",
@@ -18,11 +18,13 @@
   },
   "author": "Gustavo Santos (JBay Solutions) <gustavo.santos@jbaysolutions.com> (http://www.jbaysolutions.com)",
   "homepage": "https://github.com/jbaysolutions/vue-grid-layout",
-  "main": "dist/vue-grid-layout.common.js",
-  "unpkg": "dist/vue-grid-layout.umd.min.js",
+  "main": "dist/vue3-grid-drag-layout.cjs.js",
+  "unpkg": "dist/vue3-grid-drag-layout.umd.js",
+  "module": "dist/vue3-grid-drag-layout.esm.js",
+  "files": ["dist"],
   "scripts": {
     "dev": "vite",
-    "build": "rollup -c"
+    "build": "vite build"
   },
   "dependencies": {
     "element-resize-detector": "^1.2.1",
@@ -30,7 +32,9 @@
     "mitt": "^2.1.0"
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "@types/element-resize-detector": "^1.1.2",
+    "@vitejs/plugin-vue": "^3.2.0",
     "@vue/compiler-sfc": "3.0.0",
     "autoprefixer": "^9.0.0",
     "rollup-plugin-postcss": "^3.1.8",
@@ -38,9 +42,9 @@
     "rollup-plugin-vue": "^6.0.0-beta.10",
     "tslib": "^2.0.2",
     "typescript": "^4.0.3",
-    "vite": "^1.0.0-rc.4"
+    "vite": "^3.2.2"
   },
   "peerDependencies": {
-    "vue": "3.0.0"
+    "vue": "^3.2.41"
   }
 }
